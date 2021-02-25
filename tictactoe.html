@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Tic Tac Toe</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+
+<table>
+    <tr>
+        <td class="cell" id="0"></td>
+        <td class="cell" id="1"></td>
+        <td class="cell" id="2"></td>
+    </tr>
+    <tr>
+        <td class="cell" id="3"></td>
+        <td class="cell" id="4"></td>
+        <td class="cell" id="5"></td>
+    </tr>
+    <tr>
+        <td class="cell" id="6"></td>
+        <td class="cell" id="7"></td>
+        <td class="cell" id="8"></td>
+    </tr>
+</table>
+<div id="turn" class="playerTurn">
+    <div id="turnText" class="text"></div>
+</div>
+<div id="endgame" class="menu">
+    <div id="endgameText" class="text"></div>
+    <button id="start" onclick="huPlayersNumber()">Replay</button>
+</div>
+<div id="human" class="menu">
+    <p>Select the number of human players:</p>
+    <button onClick="selectDifficulty(1)">1</button>
+    <button onClick="selectDifficulty(2)">2</button>
+</div>
+<div id="dif" class="menu">
+    <p>Select difficulty:</p>
+        <button id="easy" onClick="startGame('easy')">Easy</button>
+        <button id="hard" onClick="startGame('hard')">Hard</button>
+</div>
+<div id="symbol" class="menu">
+    <p>Player 1 select symbol:</p>
+    <button onClick="selectSym('X')">X</button>
+    <button onClick="selectSym('O')">O</button>
+</div>
+<script src="script.js"></script>
+</body>
+
+</html>
