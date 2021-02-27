@@ -140,7 +140,10 @@ function gameOver(gameWon) {
     for (let i = 0; i < cells.length; i++) {
         cells[i].removeEventListener('click', turnClick, false);
     }
-    declareWinner(gameWon.player === huPlayer1 ? "You win!" : "You lose");
+    humanPlayers === 1 ?
+        declareWinner(gameWon.player === huPlayer1 ? "You win!" : "You lose") :
+        declareWinner(gameWon.player === huPlayer1 ? `Player ${huPlayer1} wins` : `Player ${aiPlayer} wins`);
+    ;
 }
 
 function declareWinner(who) {
